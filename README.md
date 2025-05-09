@@ -1,88 +1,27 @@
-# React + TypeScript + Vite
+🚨# Projeto de Login com Firebase e Material-UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação de login utilizando React, Firebase e Material-UI. Ele simula um sistema de login com captura de dados de login e redireciona o usuário para uma página oficial caso o login falhe.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Login Simulado**: Ao tentar fazer login, o sistema captura os dados inseridos, como e-mail, senha, endereço IP, user agent e a plataforma utilizada.
+- **Armazenamento no Firebase**: As informações de login são salvas em um banco de dados Firestore no Firebase.
+- **Modal de Erro**: Em caso de falha no login, um modal é exibido com a opção de redirecionar o usuário para o Facebook para tentar o login novamente.
+- **Redirecionamento Condicional**: Caso o login seja bem-sucedido, o usuário será alertado com uma mensagem de sucesso.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: Biblioteca para construção da interface de usuário.
+- **Firebase**: Para armazenar as informações de login no Firestore.
+- **Material-UI**: Para componentes de interface de usuário, como botões e tipografia.
+- **React Router**: Para navegação entre as páginas da aplicação.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Pré-requisitos
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Antes de começar, é necessário ter instalado:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-=======
-# 📦 **RastreioFast - Projeto de Rastreio de Entregas**
-
-O **RastreioFast** é uma aplicação web onde os usuários podem rastrear o status de suas entregas e consultar os dados capturados de usuários autenticados.
-
-Este projeto utiliza o Firebase para armazenar os dados de login, com funcionalidades de visualização e exportação de dados para PDF.
-## 🚨 **Atensão**
-* Esta é uma aplicação de rastreamento de entregas com coleta e exposição de dados sensíveis de usuários, simulando um cenário de phishing para fins educacionais ou demonstrativos.
-
-## 🚀 **Funcionalidades**
-
-- **Login de usuário:** Permite que o usuário faça login com e-mail e senha, armazenando informações no Firebase.
-- **Rastreio de entregas:** Usuários autenticados podem inserir um código de rastreio para acompanhar o status da entrega.
-- **Visualização de dados capturados:** Uma página exibe dados sobre os usuários autenticados, como e-mail, senha, IP, plataforma e horário de login.
-- **Exportação de dados para PDF:** Permite exportar todos os dados da tabela para um arquivo PDF.
-
-## 🛠️ **Tecnologias Utilizadas**
-
-- **Frontend:**
-  - **React**: Biblioteca para construção da interface.
-  - **Material UI**: Biblioteca de componentes de UI.
-  - **jspdf**: Biblioteca para criação de PDFs no frontend.
-  - **jspdf-autotable**: Extensão do `jspdf` para criar tabelas no PDF.
-  
-- **Backend:**
-  - **Firebase**: Para armazenar dados no Firestore e autenticação de usuários.
-
-- **Outros:**
-  - **React Router**: Para navegação entre as páginas.
-
-## 📑 **Estrutura do Projeto**
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [Firebase](https://firebase.google.com/) configurado no seu projeto
 
 ```bash
 /src
@@ -179,12 +118,3 @@ npm start
 
 Se você deseja contribuir para este projeto, sinta-se à vontade para abrir um pull request ou issue. Fique à vontade para melhorar a funcionalidade ou sugerir novas ideias!
 
-
-
-
-
-
->>>>>>> 1d2956ae88a16a797e3d19a2147be7c2bb7b6401
-=======
-# phishing-facebook
->>>>>>> 1bf1e5fe60544a4a4d3b713238951873ef4372cf
