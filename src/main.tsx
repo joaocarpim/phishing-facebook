@@ -5,7 +5,7 @@ import "./index.css";
 
 const rootElement = document.getElementById("root");
 
-if (!rootElement) throw new Error("Elemento root não encontrado, PORRA!");
+if (!rootElement) throw new Error("Elemento root não encontrado!");
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
